@@ -4,12 +4,15 @@
     Peça para o usuário inserir números sucessivamente e some - os.O programa para quando o usuário inserir 0 e então exibe a soma total.
     */
     
-    //ENTRADA
+    let soma = 0;
+    let numero = parseInt(prompt("Insira um número (0 para sair):"));
 
+    while (numero !== 0) {
+        numero = parseInt(prompt("Insira um número (0 para sair):"));
+        if (numero === 0) break;
+        soma += numero;
+    }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
+    document.write(`A soma total é: ${soma}`);
     
 </script>

@@ -19,12 +19,46 @@
     d) O candidato vencedor.
     */
 
-    //ENTRADA
+    let urna = Number(prompt(`Opções da urna 
+1. Candidato Joãozinho
+2. Candidato Mariazinha
+3. Nulo
+4. Branco
+Aperte 0 para encerrar a votação.`));
 
+    let joao = 0;
+    let maria = 0;
+    let nulo = 0;
+    let branco = 0;
+    let vencedor = "";
 
-    //PROCESSAMENTO
+    while (urna != 0) {
+        urna = Number(prompt("Informe seu voto:"))
+        if (urna == 1) {
+            joao += 1;
+        } else if (urna == 2) {
+            maria += 1;
+        } else if (urna == 3) {
+            nulo += 1;
+        } else if (urna == 4) {
+            branco += 1;
+        } 
+    } if (maria > joao) {
+        vencedor = "Maria";
+    } else if (joao > maria) {
+        vencedor = "João";
+    } else {
+        vencedor = "Empate";
+    }
+    const total = maria + joao + nulo + branco;
+    const nuloPorcentagem = (nulo / total * 100).toFixed(0);
+    const brancoPorcentagem = (branco / total * 100).toFixed(0);
 
-
-    //SAÍDA
+    document.write(`Total de votos em João: ${joao}. <br>
+    Total de votos em Maria: ${maria}. <br>
+    Pocentagem total de votos nulos: ${nuloPorcentagem}%. <br>
+    Porcentagem total de votos brancos: ${brancoPorcentagem}%. <br>
+    Candidato vencedor: ${vencedor}.`); 
+    
 
 </script>

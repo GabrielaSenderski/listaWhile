@@ -7,12 +7,16 @@
     Saída: 54321
     */
 
-    //ENTRADA
+    let numero = prompt("Digite um número para inverter:");
+    let inverter = "";
+    let contador = numero.length - 1;
 
+    while (contador >= 0) {
+        inverter += numero[contador];
+        contador--;
+    }
 
-    //PROCESSAMENTO
+    alert(`Número invertido: ${inverter}`);
 
-
-    //SAÍDA
 
 </script>

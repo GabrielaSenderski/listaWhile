@@ -10,12 +10,36 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //ENTRADA
-    
 
-    //PROCESSAMENTO
+    let nome = prompt("Insira seu nome:");
+    Array.from(nome);
+    while (nome.length < 3) {
+        alert("Tente novamente, o nome deve ser maior que 3 caracteres:");
+        nome = prompt("Insira seu nome:");
+    };
 
+    let idade = Number(("Insira sua idade:"));
+    while (idade > 150 || idade < 0) {
+        alert("Tente novamente, a idade deve estar entre 0 e 150:");
+        idade = Number(("Insira sua idade:"));
+    };
 
-    //SAÍDA
+    let salario = Number(prompt("Insira seu salário:"));
+    while (salario < 0) {
+        alert("Tente novamente, o salário deve ser maior que 0:");
+        salario = Number(prompt("Insira seu salário:"));
+    };
+
+    let sexo = prompt("Insira seu sexo ('f' ou 'm'):").toLowerCase();
+    while (sexo != "f" && sexo != "m") {
+        alert("Tente novamente, o sexo deve ser 'f' ou 'm':");
+        sexo = prompt("Insira seu sexo ('f' ou 'm'):").toLowerCase();
+    };
+
+    let civil = prompt("Insira seu estado civil ('s', 'c', 'v', 'd'):");
+    while (civil != "s" && civil != "c" && civil != "v" && civil != "d"){
+        alert("Tente novamente, o estado civil deve ser 's', 'c', 'v', 'd':");
+        civil = prompt("Insira seu estado civil ('s', 'c', 'v', 'd'):");
+    };
 
 </script>

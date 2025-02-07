@@ -5,11 +5,28 @@
     */
 
     //ENTRADA
-
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    let armazenar = getRandomInt(1, 30);
+    let chuteUsuario = Number(prompt("Adivinhe o número aleatório entre 1 e 30:"));
+    do {
+        alert("Dica: maior.")
+        chuteUsuario = Number(prompt("Adivinhe o número aleatório entre 1 e 30:"));
+    } while (chuteUsuario < armazenar);
+    do {
+        alert("Dica: menor.")
+        chuteUsuario = Number(prompt("Adivinhe o número aleatório entre 1 e 30:"));
+    } while (chuteUsuario > armazenar);
+    do {
+        alert(`Parabéns! Você acertou, o número era ${chuteUsuario}`);
+        break;
+    } while (chuteUsuario === armazenar);
+    
 
     //PROCESSAMENTO
 
 
     //SAÍDA
-    
+
 </script>
